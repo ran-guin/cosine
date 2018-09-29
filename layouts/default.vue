@@ -29,14 +29,14 @@ export default {
   },
   data() {
     return {
-      page: 'mission',
+      page: 'us',
       links: [
         { Mission: 'mission' },
-        { Staff: 'staff' },
         { Expertise: 'us' },
         // { Demos: 'demos' },
-        { Contact: 'contact' },
-        { Projects: 'projects' }
+        { Projects: 'projects' },
+        { Staff: 'staff' },
+        { Contact: 'contact' }
       ]
     }
   },

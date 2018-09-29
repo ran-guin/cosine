@@ -1,7 +1,7 @@
 <template lang='pug'>
   div.container
     p &nbsp;
-    h2 Contact Information
+    h2 Current Projects
     hr
     p 
       b If any of these projects is of interest to you, please feel free to contact us to get involved.
