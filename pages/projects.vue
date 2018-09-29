@@ -77,7 +77,7 @@ export default {
         },
         {
           name: 'PRAM',
-          image: '/images/cosine/pram.png',
+          image: '/images/cosine/pramIco.png',
           title: 'Purchasing Receiving & Asset Management',
           description: [
             'A very cost-effective open source solution for managing standard small to medium-sized Purchasing & Asset Management requirements'
