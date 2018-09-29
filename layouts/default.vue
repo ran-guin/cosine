@@ -7,7 +7,7 @@
       div.mainMenu
         span(v-for='link in links') 
           // span.menuItem(v-for='key, label in link' v-bind:class="{ onPage: page === key, offPage: page !== key }")
-          span.menuItem(v-for='key, label in link' :class="pickClass" v-on:click="activate(key)")
+          span.menuItem(v-for='key, label in link' v-on:click="activate(key)")
             nuxt-link(:to='key')
               span.onPage(v-if='page===key') {{label}} &nbsp; &nbsp;
               span.offPage(v-else) {{label}} &nbsp; &nbsp;
@@ -51,7 +51,7 @@ export default {
   },
   methods: {
     activate(layer) {
-      console.log('activate ' + layer)
+      console.log('activate ' + layer + ' page')
       this.page = layer
     }
   }
