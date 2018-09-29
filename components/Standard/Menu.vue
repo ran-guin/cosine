@@ -173,11 +173,11 @@ a.dropbtn
   font-weight: bold;
   color: $hoverColour;
 
-
 li 
   a:hover
     font-weight: bold;
     color: $hoverColour;
+    text-decoration: none;
 
 li.dropdown
     display: inline-block

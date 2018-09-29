@@ -14,8 +14,8 @@
   transform: rotateX(180deg);
   position: relative;
   overflow: hidden;
-  height: 180px;
-  width: 245px;
+  height: 39px;
+  width: 49px;
 }
 
 .Triangle {
@@ -27,36 +27,36 @@
 }
 
 .Triangle--one {
-  border-left: 105px solid transparent;
-  border-right: 105px solid transparent;
-  border-bottom: 180px solid #41b883;
+  border-left: 21px solid transparent;
+  border-right: 21px solid transparent;
+  border-bottom: 36px solid #41b883;
 }
 
 .Triangle--two {
-  top: 30px;
-  left: 35px;
+  top: 6px;
+  left: 7px;
   animation: goright 0.5s linear forwards 3.5s;
-  border-left: 87.5px solid transparent;
-  border-right: 87.5px solid transparent;
-  border-bottom: 150px solid #3b8070;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-bottom: 30px solid #3b8070;
 }
 
 .Triangle--three {
-  top: 60px;
-  left: 35px;
+  top: 12px;
+  left: 7px;
   animation: goright 0.5s linear forwards 3.5s;
-  border-left: 70px solid transparent;
-  border-right: 70px solid transparent;
-  border-bottom: 120px solid #35495e;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-bottom: 24px solid #35495e;
 }
 
 .Triangle--four {
-  top: 120px;
-  left: 70px;
+  top: 24px;
+  left: 14px;
   animation: godown 0.5s linear forwards 3s;
-  border-left: 35px solid transparent;
-  border-right: 35px solid transparent;
-  border-bottom: 60px solid #fff;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 12px solid #fff;
 }
 
 @keyframes turn {

@@ -27,12 +27,14 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    'bootstrap/dist/css/bootstrap.css'
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~plugins/bootstrap.js'
   ],
 
   /*
@@ -40,7 +42,16 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    ['nuxt-fontawesome', {
+      component: 'fa',
+      imports: [
+        {
+          set: '@fortawesome/free-solid-svg-icons',
+          icons: ['fas']
+	}
+      ]
+    }]
   ],
   /*
   ** Axios module configuration
