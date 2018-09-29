@@ -8,14 +8,14 @@
         fa.icon(:icon='skill.icon')
         span &nbsp; &nbsp; {{skill.name}}
       br
-      span.block
-        p {{skill.description}}
+      div.block(v-if='skill.description') {{skill.description}}
+      div.listBlock
         ul
         span(v-for="item in skill.list")
           li {{item}}
       hr
 
-    p &nbsp;
+    div.col-md-12 &nbsp;
     span(v-for="image in tools")
       img.toolsLogo(:src='image')
 
@@ -85,7 +85,12 @@ export default {
 }
 .block {
   // border: solid black 1px;
-  padding: 2rem;
+  padding: 0rem;
+  padding-left: 2rem;
+}
+.listBlock {
+  padding: 0rem;
+  padding-left: 4rem;
 }
 .toolsLogo {
   max-height: 100px;

@@ -15,10 +15,10 @@
       div(v-if='project.title')
         h5 
           u {{project.title}}
-      div.container
-        div(v-if='project.description' v-for='p in project.description')
+      div.projectBlock
+        span(v-if='project.description' v-for='p in project.description')
           p {{p}}
-        div(v-if='project.list')
+        div.listBlock(v-if='project.list')
           ul
           span(v-for="item in project.list")
             li {{item}}
@@ -92,5 +92,13 @@ export default {
 <style>
 .projectLogo {
   max-height: 3rem;
+}
+.projectBlock {
+  // border: solid black 1px;
+  padding: 2rem;
+}
+.listBlock {
+  // border: solid black 1px;
+  padding: 2rem;
 }
 </style>
