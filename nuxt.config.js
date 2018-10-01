@@ -28,7 +28,7 @@ module.exports = {
   */
   css: [
     'bootstrap/dist/css/bootstrap.css',
-    '~/assets/transistion.css'
+    '@/assets/transition.css'
   ],
 
   /*
