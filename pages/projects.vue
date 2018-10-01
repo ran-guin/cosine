@@ -1,19 +1,19 @@
 <template lang='pug'>
   div.container
     p &nbsp;
-    h2 Current Projects
+    h1 Current Projects
     hr
     p 
       b If any of these projects is of interest to you, please feel free to contact us to get involved.
     p We are always looking for enthusiastic developers and potential users / collaborators
     hr
     span.container.col-md-12(v-for="project in projects")
-      h4 
+      h2 
         span {{project.name}}
         span &nbsp; &nbsp;
         img.projectLogo(:src="project.image")
       div(v-if='project.title')
-        h5 
+        h3 
           u {{project.title}}
       div.projectBlock
         span(v-if='project.description' v-for='p in project.description')

@@ -1,11 +1,11 @@
 <template lang='pug'>
   div.container
     p &nbsp;
-    h2 Skills & Expertise
+    h1 Skills & Expertise
     hr
     div.flex-container
       span.flex-item(v-for="skill in skills")
-        h4 
+        h2 
           fa.icon(:icon='skill.icon')
           span &nbsp; &nbsp; {{skill.name}}
         br
