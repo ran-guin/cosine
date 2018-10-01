@@ -3,21 +3,20 @@
     p &nbsp;
     h2 Skills & Expertise
     hr
-    span.container.col-md-6(v-for="skill in skills")
-      h4 
-        fa.icon(:icon='skill.icon')
-        span &nbsp; &nbsp; {{skill.name}}
-      br
-      div.block(v-if='skill.description') {{skill.description}}
-      div.listBlock
-        ul
-        span(v-for="item in skill.list")
-          li {{item}}
-      hr
-
-    div.col-md-12 &nbsp;
-    span(v-for="image in tools")
-      img.toolsLogo(:src='image')
+    div.flex-container
+      span.flex-item(v-for="skill in skills")
+        h4 
+          fa.icon(:icon='skill.icon')
+          span &nbsp; &nbsp; {{skill.name}}
+        br
+        div.block(v-if='skill.description') {{skill.description}}
+        div.listBlock
+          ul
+          span(v-for="item in skill.list")
+            li {{item}}
+      div.wide-item &nbsp;
+        span(v-for="image in tools")
+          img.toolsLogo(:src='image')
 
 </template>
 
@@ -79,6 +78,20 @@ export default {
 }
 </script>
 <style>
+.flex-container {
+  display: flex;
+  flex-direction: row col;
+  flex-wrap: wrap;
+}
+.flex-item {
+  border: 1px solid lightgrey;
+  padding: 2rem;
+  width: 50%;
+}
+.wide-item {
+  width: 100%;
+  padding: 2rem;
+}
 .boxed {
   border: solid black 1px;
   padding: 2rem;
@@ -91,6 +104,9 @@ export default {
 .listBlock {
   padding: 0rem;
   padding-left: 4rem;
+}
+.toolbox {
+  background-color: lightgrey;
 }
 .toolsLogo {
   max-height: 100px;
