@@ -14,7 +14,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/images/cosine/cosine.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico?v=1' }
     ]
   },
 
@@ -27,7 +27,8 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    'bootstrap/dist/css/bootstrap.css'
+    'bootstrap/dist/css/bootstrap.css',
+    '~/assets/transistion.css'
   ],
 
   /*
