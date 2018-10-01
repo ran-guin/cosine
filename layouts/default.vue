@@ -12,7 +12,7 @@
               span.onPage(v-if='page===key') {{label}} &nbsp; &nbsp;
               span.offPage(v-else) {{label}} &nbsp; &nbsp;
     div.body.myBody
-      <nuxt/>
+      nuxt
     div.footer.myFooter
       PublicFooter()
   </div>
@@ -31,11 +31,11 @@ export default {
     return {
       page: 'us',
       links: [
-        { Mission: 'mission' },
+        { About: 'mission' },
         { Expertise: 'us' },
         // { Demos: 'demos' },
         { Projects: 'projects' },
-        { Staff: 'staff' },
+        // { Staff: 'staff' },
         { Contact: 'contact' }
       ]
     }
