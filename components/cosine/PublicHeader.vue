@@ -72,7 +72,7 @@ export default {
 
 <style scoped lang="sass">
 img.logo
-  max-height: 10rem;
+  max-height: 15rem;
   padding: 1rem;
 
 .myMenu

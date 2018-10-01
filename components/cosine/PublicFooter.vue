@@ -50,8 +50,6 @@ export default {
 
 <style scoped>
 .publicFooter {
-  padding: 2rem;
-  font-size: 1rem;
 }
 
 ul {
