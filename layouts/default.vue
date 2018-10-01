@@ -61,7 +61,7 @@ export default {
 <style lang="sass">
 html
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -77,11 +77,11 @@ html
 
 .button--green
   display: inline-block;
-  border-radius: 4px;
+  border-radius: 0.5rem;
   border: 1px solid #3b8070;
   color: #3b8070;
   text-decoration: none;
-  padding: 10px 30px;
+  padding: 1rem 3rem;
 
 .button--green:hover
   color: #fff;
@@ -89,12 +89,12 @@ html
 
 .button--grey
   display: inline-block;
-  border-radius: 4px;
+  border-radius: 0.5rem;
   border: 1px solid #35495e;
   color: #35495e;
   text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+  padding: 1rem 3rem;
+  margin-left: 1.5rem;
 
 .button--grey:hover
   color: #fff;
@@ -102,12 +102,12 @@ html
 
 /*** Customize Header / Footer Settings: ***/
 $header-background-colour: white;
-$default-padding: 40px 50px;
+$default-padding: 2rem 3rem;
 $header-colour: darkgrey;
 
 $header-font-size: 4rem;
-
 $footer-font-size: 3rem;
+
 $footer-colour: black;
 $footer-background-colour: turquoise;
 
@@ -117,8 +117,8 @@ $body-background-colour: #ddd;
 $body-colour: black;
 
 $min-height: 30rem;
-$header-height: 10rem;
-$subheader-height: 4rem;
+$header-height: 15rem;
+$subheader-height: 6rem;
 $footer-height: 6rem;
 
 // $min-height: 500px;
@@ -156,17 +156,19 @@ $footer-height: 6rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   height: $footer-height;
+  font-size: 2rem;
 
 a
   color: black;
   font-weight: normal;
+  text-decoration: none;
 
 a:hover
   color: black;
   font-weight: bold;
+  text-decoration: none;
 
 .html
-  font-size: 18px !important;
   min-height: calc(#{$min-height} + #{$header-height} + #{$subheader-height} + #{$footer-height})
 
 .myBody
@@ -207,10 +209,10 @@ a:hover
 //   color: black;
 
 .menuItem
-  font-size: 20px;
+  font-size: 3rem;
 
 .submenu
-  font-size: 20px;
+  font-size: 1rem;
 
 .heading
   color: blue;
@@ -219,7 +221,7 @@ hr
   border-top: 2px solid grey
 
 .myMenu
-  padding: 3rem;
+  padding: 2rem;
 
 .menuItem
   padding-left: 1rem;
