@@ -53,9 +53,12 @@ export default {
           list: [
             'Dinner Parties',
             'Sports Activities',
+            'Discussion Groups',
+            'Cultural Events',
             'Singles Events',
             'Outdoor Activities',
-            'Group Travel'
+            'Group Travel',
+            'Community Support Groups'
           ]
         },
         {

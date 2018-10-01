@@ -105,8 +105,9 @@ $header-background-colour: white;
 $default-padding: 2rem 3rem;
 $header-colour: darkgrey;
 
-$header-font-size: 4rem;
-$footer-font-size: 3rem;
+$header-font-size: 2rem;
+$body-font-size: 1rem;
+$footer-font-size: 1.5rem;
 
 $footer-colour: black;
 $footer-background-colour: turquoise;
@@ -156,7 +157,7 @@ $footer-height: 6rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   height: $footer-height;
-  font-size: 2rem;
+  font-size: $footer-font-size;
 
 a
   color: black;
@@ -173,6 +174,7 @@ a:hover
 
 .myBody
   min-height: $min-height;
+  font-size: $body-font-size;
   background-color: white;
 
 @media screen and (min-height: $min-height + $header-height + $subheader-height + $footer-height)
@@ -208,9 +210,6 @@ a:hover
 //   // background-color: darkgrey !important;
 //   color: black;
 
-.menuItem
-  font-size: 3rem;
-
 .submenu
   font-size: 1rem;
 
@@ -224,6 +223,7 @@ hr
   padding: 2rem;
 
 .menuItem
+  font-size: 2rem;
   padding-left: 1rem;
   padding-right: 1rem;
   text-decoration: none;

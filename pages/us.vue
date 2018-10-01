@@ -6,9 +6,10 @@
     div.flex-container
       span.flex-item(v-for="skill in skills")
         h2 
-          fa.icon(:icon='skill.icon')
-          span &nbsp; &nbsp; {{skill.name}}
-        br
+          center
+            fa.icon(:icon='skill.icon')
+            span &nbsp; &nbsp; {{skill.name}}
+        br 
         div.block(v-if='skill.description') {{skill.description}}
         div.listBlock
           ul
