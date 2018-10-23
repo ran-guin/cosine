@@ -3,20 +3,22 @@
     HEAD
       meta(name='viewport' content='width=device-width, initial-scale=1.0')
       link(rel="shortcut icon" :href='ico')
-    div.col-xs-4.info-logo
-      img.logo(src='~/static/images/cosine.logo.png' alt='cosine.logo.png')
-    // div.col-xs-8.info-logo.myMenu
-    //   span(v-for='link in links') 
-    //     span.menuItem(v-for='key, label in link')
-    //       nuxt-link(:to='key') {{label}} &nbsp; &nbsp;
+    div.info-header
+      div.info-logo
+        img.logo(src='~/static/images/cosine/cosine.logo.png' alt='cosine.logo.png')
+      div.info-right
+        Tabs.tab-header(v-if='tabs' :list='tabs' :onPick='onTab' defaultTab='Expertise')
+
  </template>
 
 <script>
-import CustomMenu from './../Standard/Menu'
+// import CustomMenu from './../Standard/Menu'
+import Tabs from './../Standard/Tabs'
 
 export default {
   components: {
-    CustomMenu
+    // CustomMenu,
+    Tabs
   },
   props: {
     left: {
@@ -35,11 +37,15 @@ export default {
       type: Boolean,
       default: true
     },
-    onSelect: {
+    onTab: {
       type: Function,
       default() {
         return null
       }
+    },
+    tabs: {
+      type: Array,
+      default: null
     }
   },
   data() {
@@ -54,17 +60,6 @@ export default {
         { Projects: 'projects' }
       ],
       active_block: 'mission'
-    }
-  },
-  computed: {
-    onClick: function(el) {
-      if (this.onSelect) {
-        console.log('picked...')
-        return this.onSelect
-      } else {
-        console.log('no click function supplied')
-        return null
-      }
     }
   }
 }
@@ -86,4 +81,35 @@ img.logo
   a:hover
     color: black;
     text-decoration: none;
+
+.tab-header
+
+.info-header
+  width: 100%;
+  // height: 60px;
+  // color: #666;
+  // background-color: white;
+
+.info-logo
+  text-align: left;
+  vertical-align: top;
+  display: inline-block;
+
+.info-left
+  padding-left: 5rem;
+  text-align: left;
+  // color: black;
+  display: inline-block;
+
+.info-right
+  float: right;
+  text-align: right;
+  display: inline-block;
+  height: 100%;
+
+@media screen and (max-width: 768px)
+  .info-left
+    display: none;
+  .info-logo
+    display: none;
 </style>
