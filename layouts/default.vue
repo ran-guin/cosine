@@ -1,17 +1,12 @@
 <template lang='pug'>
   div.page
     div.header.myHeader
-      PublicHeader(:page='page' :onSelect='activate')
+      PublicHeader(:page='page' :tabs='links' :onTab='activate')
+
     div.subheader.subheader1
-      // CustomMenu(:links='links' type='function' :onClick="activate" :active="page")
-      div.mainMenu
-        span(v-for='link in links') 
-          // span.menuItem(v-for='key, label in link' v-bind:class="{ onPage: page === key, offPage: page !== key }")
-          span.menuItem(v-for='key, label in link' v-on:click="activate(key)")
-            nuxt-link(:to='key')
-              span.onPage(v-if='page===key') {{label}} &nbsp; &nbsp;
-              span.offPage(v-else) {{label}} &nbsp; &nbsp;
+      span &nbsp;
     div.body.myBody
+      div.background-image
       nuxt
     div.footer.myFooter
       PublicFooter()
@@ -21,6 +16,7 @@
 <script>
 import PublicHeader from './../components/cosine/PublicHeader'
 import PublicFooter from '~/components/cosine/PublicFooter'
+import Tabs from '~/components/Standard/Tabs'
 export default {
   name: 'Hello',
   components: {
@@ -37,7 +33,8 @@ export default {
         { Projects: 'projects' },
         // { Staff: 'staff' },
         { Contact: 'contact' }
-      ]
+      ],
+      tabs: ['About', 'Expertise', 'Projects', 'Contact']
     }
   },
   computed: {
@@ -103,7 +100,7 @@ html
 /*** Customize Header / Footer Settings: ***/
 $header-background-colour: white;
 $default-padding: 2rem 3rem;
-$header-colour: darkgrey;
+$header-colour: lightgrey;
 
 $header-font-size: 4rem;
 $footer-font-size: 3rem;
@@ -118,7 +115,7 @@ $body-colour: black;
 
 $min-height: 30rem;
 $header-height: 15rem;
-$subheader-height: 6rem;
+$subheader-height: 2rem;
 $footer-height: 6rem;
 
 // $min-height: 500px;
@@ -156,7 +153,7 @@ $footer-height: 6rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   height: $footer-height;
-  font-size: 2rem;
+  font-size: 1.5rem;
 
 a
   color: black;
@@ -172,8 +169,20 @@ a:hover
   min-height: calc(#{$min-height} + #{$header-height} + #{$subheader-height} + #{$footer-height})
 
 .myBody
+  font-size: 1rem;
   min-height: $min-height;
-  background-color: white;
+  background-color: transparent;
+
+.background-image
+  background: url('./../static/images/cosine/animated_sine.gif') no-repeat center fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  opacity: 0.1;
+  z-index: -1;
 
 @media screen and (min-height: $min-height + $header-height + $subheader-height + $footer-height)
   .myBody
@@ -209,10 +218,7 @@ a:hover
 //   color: black;
 
 .menuItem
-  font-size: 3rem;
-
-.submenu
-  font-size: 1rem;
+  font-size: 2rem;
 
 .heading
   color: blue;
@@ -223,7 +229,20 @@ hr
 .myMenu
   padding: 2rem;
 
+// wide version first
+.flex-container
+  display: flex;
+  flex-direction: row;
+
+.flex-item
+  width: 25%
+  flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 0px;
+
 .menuItem
+  width: 100%
   padding-left: 1rem;
   padding-right: 1rem;
   text-decoration: none;
@@ -239,6 +258,9 @@ hr
   .onPage
     color: black;
     font-weight: bold;
+    font-size: 2rem;
   .offPage
     color: #333
+    font-size: 2rem;
+
 </style>
