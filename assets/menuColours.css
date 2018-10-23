@@ -1,0 +1,48 @@
+/*! Source: assets/colours.css  */
+.visible-tab {
+  background-color: transparent;
+}
+
+.visible-tab.responsive {
+  background-color: grey;
+}
+
+.visible-tab a.tabItem {
+  color: darkgrey;
+}
+
+.visible-tab a.icon {
+	color: #ddd;
+}
+
+.tab-label a {
+  color: turquoise;
+}
+.tab-label a:hover {
+  color: blue;
+}
+
+.visible-tab a:hover {
+  background-color: transparent;
+  color: black;
+  /*border: 2px solid blue;*/
+}
+
+.active {
+  border: 1px solid black;
+}
+
+.onPage {
+  color: orange;
+  font-weight: bold;
+}
+.onPage:hover {
+  color: red;
+}
+
+.offPage {
+  color: grey;
+}
+.offPage:hover {
+  color: black;
+}
