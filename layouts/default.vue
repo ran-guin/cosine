@@ -16,7 +16,7 @@
 <script>
 import PublicHeader from './../components/cosine/PublicHeader'
 import PublicFooter from '~/components/cosine/PublicFooter'
-import Tabs from '~/components/Standard/Tabs'
+import Tabs from '~/components/Std/nuxtTabs'
 export default {
   name: 'Hello',
   components: {
