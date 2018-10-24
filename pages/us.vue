@@ -10,11 +10,12 @@
             fa.icon(:icon='skill.icon')
             span &nbsp; &nbsp; {{skill.name}}
         br
-        div.block(v-if='skill.description') {{skill.description}}
+        div.block.text-lg(v-if='skill.description') {{skill.description}}
         div.listBlock
-          ul
-          span(v-for="item in skill.list")
-            li {{item}}
+          p.text-lg
+            ul
+            span(v-for="item in skill.list")
+              li {{item}}
     div.wide-item &nbsp;
       hr
       span(v-for="image in tools")
@@ -89,6 +90,11 @@ export default {
   border: 1px solid lightgrey;
   padding: 2rem;
   width: 50%;
+}
+@media screen and (max-width: 767px) {
+  .flex-item {
+    width: 100%;
+  }
 }
 
 .wide-item {

@@ -2,16 +2,17 @@
   div.container
     p &nbsp;
     p &nbsp;
-    ul
-      li.col-md-2(v-for="link in links")
-        a(v-if='link.url' :href='link.url' target="_blank")
-          h4(data-tooltip :title='link.description') {{link.name}}
-          br
-          img(:src="link.img" height='40px')        
-        router-link(v-else :to="{name: link.name}" target="_blank")
-          h4(data-tooltip :title='link.description') {{link.name}}
-          br
-          img(:src="link.img" height='40px')
+    p.text-lg
+      ul
+        li.col-md-2(v-for="link in links")
+          a(v-if='link.url' :href='link.url' target="_blank")
+            h4(data-tooltip :title='link.description') {{link.name}}
+            br
+            img(:src="link.img" height='40px')        
+          router-link(v-else :to="{name: link.name}" target="_blank")
+            h4(data-tooltip :title='link.description') {{link.name}}
+            br
+            img(:src="link.img" height='40px')
 </template>
 
 <script>

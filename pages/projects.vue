@@ -3,9 +3,10 @@
     p &nbsp;
     h1 Current Projects
     hr
-    p 
-      b If any of these projects is of interest to you, please feel free to contact us to get involved.
-    p We are always looking for enthusiastic developers and potential users / collaborators
+    div.text-lg
+      p 
+        b If any of these projects is of interest to you, please feel free to contact us to get involved.
+      p We are always looking for enthusiastic developers and potential users / collaborators
     hr
     span.container.col-md-12(v-for="project in projects")
       h2 
@@ -15,7 +16,7 @@
       div(v-if='project.title')
         h3 
           u {{project.title}}
-      div.projectBlock
+      div.projectBlock.text-lg
         span(v-if='project.description' v-for='p in project.description')
           p {{p}}
         div.listBlock(v-if='project.list')
@@ -23,7 +24,6 @@
           span(v-for="item in project.list")
             li {{item}}
       hr
-
 </template>
 
 <script>
