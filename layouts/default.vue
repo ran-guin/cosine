@@ -115,7 +115,7 @@ $body-colour: black;
 
 $min-height: 30rem;
 $header-height: 15rem;
-$subheader-height: 2rem;
+$subheader-height: 1rem;
 $footer-height: 6rem;
 
 // $min-height: 500px;
@@ -189,6 +189,13 @@ a:hover
     min-height: calc(100vh - #{$header-height} - #{$subheader-height} - #{$footer-height});
     // min-height: calc(100vh - $min-height - $header-height - $subheader-height - $footer-height);
     // background-color: #ddd; 
+
+@media screen and (max-width: 767px)
+  .myHeader
+    height: auto;
+    min-height: 4rem;
+  .subheader
+    height: auto;
 
 .overlay
   position: absolute;
