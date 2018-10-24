@@ -11,8 +11,16 @@
   color: darkgrey;
 }
 
+.visible-tab.responsive a.tabItem {
+  color: #ccc;
+}
+
 .visible-tab a.icon {
-	color: #ddd;
+	color: black;
+}
+
+.visible-tab.responsive a.icon {
+  color: black;
 }
 
 .tab-label a {
@@ -22,10 +30,48 @@
   color: blue;
 }
 
+.visible-tab.responsive .tab-label a {
+  color: turquoise;
+}
+.visible-tab.responsive .tab-label a:hover {
+  color: white;
+}
+
 .visible-tab a:hover {
   background-color: transparent;
   color: black;
   /*border: 2px solid blue;*/
+}
+
+/*
+.visible-tab a.tabItem:hover {
+  color: black;
+}
+*/
+
+.visible-tab .tab-label a:hover {
+  color: red;
+}
+
+.visible-tab.responsive .tab-label a:hover {
+  color: orange;
+}
+
+.visible-tab .activeTab {
+  border-bottom: 1px solid #fff;
+  color: #666;
+}
+.visible-tab .inactiveTab {
+  border-bottom: 0px;
+}
+
+.visible-tab.responsive .activeTab {
+  border-bottom: 1px solid #333;
+  color: #fff;
+}
+.visible-tab.responsive .inactiveTab {
+  border-bottom: 0px;
+  color: #ddd;
 }
 
 .active {
