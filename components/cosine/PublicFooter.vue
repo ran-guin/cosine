@@ -1,6 +1,6 @@
 <template lang='pug'>
   div.publicFooter
-    span.navbar-left
+    span.footer-left
       span(v-html="left")
       <!-- img.logo(src='/static/images/cosine.logo.png')  -->
       a(href='/')
@@ -68,5 +68,15 @@ span a {
 span a:hover {
   color: #000;
   font-weight: bold;
+}
+
+.footer-left {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-left {
+    display: inline-block;
+  }
 }
 </style>
