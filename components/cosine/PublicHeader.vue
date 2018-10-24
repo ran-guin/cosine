@@ -13,7 +13,7 @@
 
 <script>
 // import CustomMenu from './../Standard/Menu'
-import Tabs from './../Standard/nuxtTabs'
+import Tabs from './../Std/nuxtTabs'
 
 export default {
   components: {
