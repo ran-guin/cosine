@@ -82,15 +82,10 @@ export default {
 .offPage:hover {
 }
 
-.submenu {
-  font-size: 1.5rem;
-}
-
 .visible-tab {
   overflow: hidden;
   padding: 1rem;
   margin: 0px;
-  font-size: 2rem;
 }
 
 .visible-tab a.tabItem {
@@ -105,7 +100,7 @@ export default {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   div.visible-tab a.tabItem {
     display: none;
   }
@@ -115,7 +110,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   div.visible-tab.responsive {
     position: absolute;
     top: 0;
