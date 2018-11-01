@@ -24,14 +24,16 @@
 }
 
 .tab-label a {
-  color: turquoise;
+  color: #39a;
+  font-size: 120%;
 }
 .tab-label a:hover {
   color: blue;
 }
 
 .visible-tab.responsive .tab-label a {
-  color: turquoise;
+  color: #39a;
+  font-size: 120%;
 }
 .visible-tab.responsive .tab-label a:hover {
   color: white;
