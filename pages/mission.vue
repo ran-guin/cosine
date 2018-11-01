@@ -4,7 +4,7 @@
     h1 Mission
     hr
     div.col-md-12
-      p.text-lg We are a group of software developers and engineers dedicated to the creative design & implementation of free or low cost web applications for public service. 
+      p.text-lg We are a group of software developers and engineers dedicated to the creative design & implementation of free or low cost web applications for community benefit and public service. 
       div.col-md-6(v-for="m in mission")
         h2 {{m.name}}
         p.text-lg
