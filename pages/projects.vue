@@ -34,6 +34,15 @@ export default {
     return {
       projects: [
         {
+          name: 'IDVPN',
+          title: 'A Secure VPN for your Identity',
+          image: '/images/cosine/idvpn.svg',
+          description: [
+            'We provide ID autonomy in the age of big data.',
+            'For those that no longer want their legal actions to be tracked online'
+          ]
+        },
+        {
           name: 'LITMUS',
           title: 'Laboratory Information Management System',
           image: '/images/cosine/litmus.png',
