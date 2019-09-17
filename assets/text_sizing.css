@@ -5,8 +5,9 @@
 */
 
 
-html
+html {
   font-size: 16px;
+}
 
 .text-xxs {
 	font-size: 10px;
