@@ -1,6 +1,6 @@
 <template lang='pug'>
   div.tab-wrapper
-    div.visible-tab#tabBar
+    div.visible-tab#tabBar(v-if="context==='nuxt'")
       // HTML specific to handling NUXT static pages //
       a.tabItem(v-for='key, item in list' href='#' target='_blank' onclick='return false;')
         div(v-if="key.constructor === Object")
@@ -17,11 +17,28 @@
       a.icon(href="#" v-on:click='openMenu(1)')
         fa(icon='bars' scale='2')
 
+    div.visible-tab#tabBar(v-else)
+      a.tabItem(v-for='item in list' href='#' target='_blank' @click.prevent="onClick(item)")
+        b.submenu {{item}}
+        span &nbsp; &nbsp;
+      a.icon(href="javascript:void(0);" v-on:click='openMenu(1)')
+        icon(name='bars')
+
+      // HTML for standard router linked pages //
+      a.tabItem(v-for='key, item in list' href='#' target='_blank' @click.prevent="onClick(item)")
+        b.submenu {{item}}
+        span &nbsp; &nbsp;
+      a.icon(href="#" v-on:click='openMenu(1)')
+        icon(name='bars' scale='2')
 </template>
 <script>
 // import 'vue-awesome/icons/bars'
 export default {
   props: {
+    context: {
+      type: String,
+      default: 'nuxt'
+    },
     list: {
       type: Array,
       default() {
@@ -82,10 +99,15 @@ export default {
 .offPage:hover {
 }
 
+.submenu {
+  font-size: 1.5rem;
+}
+
 .visible-tab {
   overflow: hidden;
   padding: 1rem;
   margin: 0px;
+  font-size: 2rem;
 }
 
 .visible-tab a.tabItem {
@@ -100,7 +122,7 @@ export default {
   display: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   div.visible-tab a.tabItem {
     display: none;
   }
@@ -110,13 +132,12 @@ export default {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   div.visible-tab.responsive {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 5;
   }
   div.visible-tab.responsive a.icon {
     position: absolute;

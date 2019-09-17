@@ -61,27 +61,27 @@ $header-background-colour: white;
 $default-padding: 2rem 3rem;
 $header-colour: lightgrey;
 
-$header-font-size: 2rem;
-$body-font-size: 1rem;
-$footer-font-size: 1.5rem;
+$header-font-size: 120%;
+$body-font-size: 120%;
+$footer-font-size: 100%;
 
 $footer-colour: black;
-$footer-background-colour: turquoise;
+$footer-background-colour: #39a;
 
-$subheader-background-colour: turquoise;
+$subheader-background-colour: #39a;
 
 $body-background-colour: #ddd;
 $body-colour: black;
 
-$min-height: 30rem;
-$header-height: 15rem;
-$subheader-height: 1rem;
-$footer-height: 6rem;
+// $min-height: 30rem;
+// $header-height: 15rem;
+// $subheader-height: 1rem;
+// $footer-height: 6rem;
 
-// $min-height: 500px;
-// $header-height: 100px;
-// $subheader-height: 0px;
-// $footer-height: 100px;
+$min-height: 500px;
+$header-height: 200px;
+$subheader-height: 50px;
+$footer-height: 50px;
 
 .page
   /*margin-top: -20px;*/

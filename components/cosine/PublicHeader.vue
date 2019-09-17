@@ -67,8 +67,11 @@ export default {
 
 <style scoped lang="sass">
 img.logo
-  max-height: 15rem;
+  max-height: 200px;
   padding: 1rem;
+
+@media screen and (max-width: 767)
+  max-height: 150px;
 
 .myMenu
   padding: 3rem;
@@ -86,9 +89,6 @@ img.logo
 
 .info-header
   width: 100%;
-  // height: 60px;
-  // color: #666;
-  // background-color: white;
 
 .info-logo
   text-align: left;
@@ -107,7 +107,7 @@ img.logo
   display: inline-block;
   height: 100%;
 
-@media screen and (max-width: 768px)
+@media screen and (max-width: 767px)
   .info-left
     display: none;
   .info-logo
