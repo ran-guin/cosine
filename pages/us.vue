@@ -106,7 +106,6 @@ export default {
   padding: 2rem;
 }
 .block {
-  // border: solid black 1px;
   padding: 0rem;
   padding-left: 2rem;
 }

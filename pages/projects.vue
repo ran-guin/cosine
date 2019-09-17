@@ -97,11 +97,9 @@ export default {
   max-height: 3rem;
 }
 .projectBlock {
-  // border: solid black 1px;
   padding: 2rem;
 }
 .listBlock {
-  // border: solid black 1px;
   padding: 2rem;
 }
 </style>
